@@ -16,8 +16,8 @@ $(document).ready(function(){
   var cont = $('.scroll');
   $(window).scroll(function(){
     var wScroll=$(this).scrollTop();
-    for(var i=0; i < cont.length; i++){
-      if(wScroll>=cont.eq(i).eq(i).offset().top){
+    for(var i=0; i<cont.length; i++){
+      if(wScroll>=cont.eq(i).offset().top){
         nav.removeClass('active');
         nav.eq(i).addClass('active');
       }
@@ -45,7 +45,7 @@ $(document).ready(function(){
   $(window).scroll(function(){
     var listwScroll=$(this).scrollTop();
     for(var i=0; i < listcont.length; i++){
-      if(listwScroll>=listcont.eq(i).eq(i).offset().top){
+      if(listwScroll>=listcont.eq(i).offset().top){
         listnav.removeClass('listactive');
         listnav.eq(i).addClass('listactive');
       }
