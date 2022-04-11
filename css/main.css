@@ -204,9 +204,9 @@
   transform: translateY(-50%);
 }
 .notebook {
-  border: 1px solid #000;
   width: 800px;
-  height: 700px;
+  height: 600px;
+  padding-top: 50px;
 }
 .pf_txt {
   width: 396px;
@@ -224,6 +224,7 @@
 dl {margin-top: 15px;}
 dt, dd {
   font-size: 12px;
+  letter-spacing: 1px;
   line-height: 2rem;
 }
 dt {
@@ -288,13 +289,26 @@ dd {margin: 0;}
   margin: 0 auto;
 }
 .skill_IMG {
-  text-indent: -999em;
+  display: inline-block;
   width: 120px;
   height: 120px;
   border-radius: 100%;
   margin: 0 94px 130px 0;
-  display: inline-block;
   border: 3px solid #000;
+  position: relative;
 }
 .skill_IMG:nth-child(6),
 .skill_IMG:nth-child(12) {margin: 0;}
+.skill_IMG a {
+  text-indent: -999em;
+  display: inline-block;
+
+}
+.skill_IMG img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
