@@ -1,3 +1,4 @@
+/* section01 start */
 .header {
   top: 0;
   width: 100%;
@@ -47,27 +48,7 @@
 }
 .jump a {font-size: 18px;}
 .jumplist:first-child {position: relative;}
-.work_list {
-  opacity: 0;
-  position: absolute;
-  width: 130px;
-  padding: 30px 0;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 2px solid #222;
-  border-radius: 5px;
-  background-color: #fff;
-  text-align: center;
-}
-.jumplist:hover .work_list {opacity: 1;}
-.work_list li a {
-  font-size: 14px;
-  line-height: 2rem;
-}
-.work_list li:hover {
-  background-color: #f4f4f4;}
- .jumplist:last-child {padding-left: 50px;}
+.jumplist:last-child {padding-left: 50px;}
 .section01 {
   position: relative;
   width: 1250px;
@@ -117,6 +98,8 @@
   width: 1100px;
   height: 683px;
 }
+/* section01 end */
+/* section02 start */
 .section02 {
   position: relative;
   width: 1250px;
@@ -145,7 +128,6 @@
   border:4px solid #000;
   border-radius:50%;
   background-color:#fff;
-  /* transform:scaleX(.9); */
 }
 .eye2 {left: 30px;}
 .pupil {
@@ -184,9 +166,19 @@
   transition: all 3s ease;
   opacity: 0;
 }
+/* section02 end */
+/* section03 start */
 .section03 {
   width: 1250px;
   margin: 0 auto;
+}
+#korea {
+  padding-top: 93px;
+  margin-top: -93px;
+}
+#jeju {
+  padding-top: 93px;
+  margin-top: -93px;
 }
 .portfolio_wrap {
   display: block;
@@ -256,29 +248,40 @@ dd {margin: 0;}
   margin-top: 83px;
 }
 .skill_img {
+  position: relative;
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  margin-right: 24px;
+  border-radius: 100%;
   text-indent: -999em;
+}
+.skill_img img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 75px;
   height: 75px;
   border-radius: 100%;
-  margin-right: 24px;
-  display: inline-block;
-  border: 1px solid #000;
+  border: 3px solid #000;
 }
 .skill_img:last-child {margin-right: 0;}
+/* section03 end */
+/* section04 start */
 .section04 {
   width: 1250px;
+  height: 100vh;
   margin: 0 auto;
-  padding: 200px 0;
 }
 .ps_title_wrap {
   position: relative;
-  margin-bottom: 120px;
+  padding: 300px 0 120px 0;
 }
 .ps_span,
 .ps_title {text-align: center;}
 .ps_span {
   position: absolute;
-  top: -30px;
+  top: 275px;
   left: 32%;
   font-size: 20px;
   transform: rotate(-10deg);
@@ -288,22 +291,52 @@ dd {margin: 0;}
   width: 1250px;
   margin: 0 auto;
 }
-.skill_IMG {
-  display: inline-block;
+.skill_IMG {display: inline-block;}
+.skill_IMG a {
   width: 120px;
   height: 120px;
   border-radius: 100%;
-  margin: 0 94px 130px 0;
+  margin: 0 79px 30px 0;
   border: 3px solid #000;
   position: relative;
-}
-.skill_IMG:nth-child(6),
-.skill_IMG:nth-child(12) {margin: 0;}
-.skill_IMG a {
+  overflow: hidden;
   text-indent: -999em;
   display: inline-block;
-
 }
+.skill_IMG a:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  bottom: 0;
+  left: 0;
+  transition: .5s;
+}
+.skill_IMG .html:before,
+.html_color{background-color: #FF5722;}
+.skill_IMG .css:before,
+.css_color {background-color: #3595CF;}
+.skill_IMG .js:before,
+.js_color {background-color: #F7DF1E;}
+.skill_IMG .jq:before,
+.jq_color {background-color: #1169AE;}
+.skill_IMG .sass:before,
+.sass_color {background-color: #CD6799;}
+.skill_IMG .vue:before,
+.vue_color {background-color: #00B57B;}
+.skill_IMG .bootstrap:before,
+.bootstrap_color {background-color: #754FAD;}
+.skill_IMG .github:before,
+.github_color {background-color: #E84D31;}
+.skill_IMG .figma:before,
+.figma_color {background-color: #303030;}
+.skill_IMG .xd:before,
+.xd_color {background-color: #450135;}
+.skill_IMG .illustrator:before,
+.illustrator_color {background-color: #310000;}
+.skill_IMG .photoshop:before,
+.photoshop_color {background-color: #001D34;}
+.skill_IMG a:hover:before {height: 100%;}
 .skill_IMG img {
   position: absolute;
   top: 0;
@@ -312,3 +345,39 @@ dd {margin: 0;}
   height: 120px;
   border-radius: 50%;
 }
+.skill_wrap {
+  opacity: 0;
+  width: 126px;
+  height: 41px;
+  margin-bottom: 100px;
+  transition: .3s;
+}
+.skill_IMG:hover .skill_wrap{
+  opacity: 1;
+}
+.skill_wrap p {
+  overflow: hidden;
+  margin-bottom: 5px;
+}
+.skill_wrap p span:first-child {
+  float: left;
+}
+.skill_wrap p span:last-child {
+  float: right;
+}
+.skill_inner {
+  border: 2px solid #000000;
+  padding: 5px;
+  border-radius: 3px;
+}
+.skill_IMG:hover .skill_level {
+  height: 10px;
+  animation: ani 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes ani {
+  0% {width: 0;}
+}
+
+/* section04 end */

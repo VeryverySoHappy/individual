@@ -26,30 +26,30 @@ $(document).ready(function(){
 })
 // work, skill end
 
-// work_list start
-$(document).ready(function(){
-  $('.work_list > li').on({
-    click:function(e){
-      e.preventDefault();
-      var listpageNum=$(this).index();
-      var listsection = $('.worklist').eq(listpageNum);
-      var listoffset = listsection.offset().top;
-      $('html, body').animate({
-        scrollTop:listoffset
-      },600)
-    }
-  })
+// // work_list start
+// $(document).ready(function(){
+//   $('.work_list > li').on({
+//     click:function(e){
+//       e.preventDefault();
+//       var listpageNum=$(this).index();
+//       var listsection = $('.worklist').eq(listpageNum);
+//       var listoffset = listsection.offset().top;
+//       $('html, body').animate({
+//         scrollTop:listoffset
+//       },600)
+//     }
+//   })
 
-  var listnav = $('.work_list > li');
-  var listcont = $('.worklist');
-  $(window).scroll(function(){
-    var listwScroll=$(this).scrollTop();
-    for(var i=0; i < listcont.length; i++){
-      if(listwScroll>=listcont.eq(i).offset().top){
-        listnav.removeClass('listactive');
-        listnav.eq(i).addClass('listactive');
-      }
-    }
-  })
-})
-// work_list end
+//   var listnav = $('.work_list > li');
+//   var listcont = $('.worklist');
+//   $(window).scroll(function(){
+//     var listwScroll=$(this).scrollTop();
+//     for(var i=0; i < listcont.length; i++){
+//       if(listwScroll>=listcont.eq(i).offset().top){
+//         listnav.removeClass('listactive');
+//         listnav.eq(i).addClass('listactive');
+//       }
+//     }
+//   })
+// })
+// // work_list end
